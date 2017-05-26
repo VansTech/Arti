@@ -8,7 +8,11 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.TextView;
 
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ArtiData data = new ArtiData(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,11 +24,9 @@ public class MainActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         // Change the logo font
-        /*
         TextView title = (TextView) findViewById(R.id.title);
-        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Habibi-Regular.ttf");
+        Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/Bree.ttf");
         title.setTypeface(typeface);
-        */
     }
 
     @Override
@@ -37,7 +39,8 @@ public class MainActivity extends AppCompatActivity {
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.add_index: {
-
+                data.addIndex("NASDAQ");
+                recreate();
             }
             case R.id.delete_index: {
 
@@ -51,4 +54,9 @@ public class MainActivity extends AppCompatActivity {
         }
         return false;
     }
+
+    private void setUp() {
+        List<String> existing = data.returnIndices();
+    }
+
 }
