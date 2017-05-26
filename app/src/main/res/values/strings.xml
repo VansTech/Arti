@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">ArtiStock</string>
+
+    <!-- Universal -->
+    <string name="app_name">Arti</string>
+
+    <!-- Overflow menu -->
+    <string name="add_index">Add Index</string>
+    <string name="delete_index">Delete Index</string>
+    <string name="add_stock">Add Stock</string>
+    <string name="delete_stock">Delete Stock</string>
+
+    <!-- Anchor view -->
+    <string name="home">Home</string>
+    <string name="search">Search</string>
+    <string name="stock">Stock</string>
+    <string name="news">News</string>
+
 </resources>

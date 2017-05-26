@@ -3,30 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/vans/AndroidStudioProjects/ArtiStock/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="c019ad956ba46f197ee0034b464dda802eb68d0b">
-        <dex dex="/home/vans/AndroidStudioProjects/ArtiStock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_672f43b7edf9c3f3998189c710ef87f72e646417/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/44a0864703712c226618e4e2b5353f88527686fd/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="987adec819c9a98faf215814f41195da48fc724e">
-        <dex dex="/home/vans/AndroidStudioProjects/ArtiStock/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d9e71a26b81faa9dedc597fdef614a50d67ab1db/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/AndroidStudioProjects/ArtiStock/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
+        jar="/home/davidzhang/AndroidStudioProjects/Arti/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
         sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/home/vans/AndroidStudioProjects/ArtiStock/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_27ad000a6e7b5e8e6f17ecf7773539bb4e441095/classes.dex" />
+        <dex dex="/home/davidzhang/AndroidStudioProjects/Arti/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_3fd56864163cabd2a23be0a7b383d830675b8e4d/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="/home/davidzhang/AndroidStudioProjects/Arti/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6297e3913e64a25a617f06617ad33c4283c6c7d0">
+        <dex dex="/home/davidzhang/AndroidStudioProjects/Arti/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_0bc0c01078b415063ef9f04f6c932008e35f6f80/classes.dex" />
     </item>
 
 </items>

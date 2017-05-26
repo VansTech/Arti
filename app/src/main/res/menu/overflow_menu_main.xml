@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/add_index"
+        android:title="@string/add_index"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_index"
+        android:title="@string/delete_index"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/add_stock"
+        android:title="@string/add_stock"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/delete_stock"
+        android:title="@string/delete_stock"
+        app:showAsAction="never"/>
+</menu>
