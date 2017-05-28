@@ -32,3 +32,5 @@ Using **Add Stock** in the app's overflow menu, add the stocks you wish the app 
 
     You should have received a copy of the GNU General Public License
     along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ 
+For more information, see [LICENSE.md](https://github.com/VansTech/Arti/blob/master/LICENSE.md).
