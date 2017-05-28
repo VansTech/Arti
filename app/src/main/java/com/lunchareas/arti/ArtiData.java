@@ -94,7 +94,6 @@ public class ArtiData extends SQLiteOpenHelper {
     public void addStock(String stock) {
         if (stock.equals("") || returnStocks().contains(stock.toUpperCase())) return;
 
-        System.out.println("ADDING " + stock);
         ContentValues values = new ContentValues();
         values.put(DataUtility.StockUtility.COLUMN_NAME_NAME, stock);
 
@@ -119,7 +118,6 @@ public class ArtiData extends SQLiteOpenHelper {
     public String removeStock(String stock) {
         if (stock.equals("") || !returnStocks().contains(stock.toUpperCase())) return stock;
 
-        System.out.println("REMOVING " + stock);
         String selection = DataUtility.StockUtility.COLUMN_NAME_NAME + " LIKE ?";
         String[] selectionArgs = {stock};
         getWritableDatabase().delete(DataUtility.StockUtility.TABLE_NAME, selection, selectionArgs);

@@ -49,10 +49,8 @@ public class StockAdapter extends BaseAdapter {
 
         TextView diffView = (TextView) stockItemView.findViewById(R.id.stock_diff);
         double diff = stocks.get(position).getDiff();
-        System.out.println(diff);
 
         double absDiff = Math.abs(diff);
-        System.out.println(absDiff*100);
         absDiff = Math.round(absDiff * 100) / 100d;
 
         if (diff < 0) {
@@ -61,7 +59,13 @@ public class StockAdapter extends BaseAdapter {
             diffView.setTextColor(stockItemView.getResources().getColor(R.color.green));
         }
 
-        diffView.setText(String.format(Double.toString(absDiff)));
+        String str = Double.toString(absDiff);
+        while (str.length() < 4) {
+            if (!str.contains(".")) str += ".";
+            else str += "0";
+        }
+
+        diffView.setText(str);
 
         return stockItemView;
     }

@@ -34,7 +34,6 @@ public class StockFragment extends Fragment {
 
         System.out.println("PRINTING STOCKS");
         for (String s : stockStrings) {
-            System.out.println(s);
             stocks.add(new Stock(s, view.getContext()));
         }
 

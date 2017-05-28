@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_home).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment frag = new IndexFragment();
+                Fragment frag = new StockFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, frag)
@@ -60,27 +60,26 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_money).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Fragment frag = new StockFragment();
+                /*Fragment frag = new IndexFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, frag)
                         .commit();
 
-                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 1).apply();
+                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 1).apply();*/
             }
         });
 
         findViewById(R.id.btn_news).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                // Implement eventually
-                /*Fragment frag = new NewsFragment();
+                Fragment frag = new NewsFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, frag)
                         .commit();
 
-                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 2).apply();*/
+                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 2).apply();
             }
         });
 
@@ -166,24 +165,29 @@ public class MainActivity extends AppCompatActivity {
         int toSet = getSharedPreferences("PREFERENCES", MODE_PRIVATE).getInt("LastVisitedScreen", 0);
 
         if (toSet == 0) {
-            Fragment frag = new IndexFragment();
-            FragmentManager fragmentManager = getFragmentManager();
-            fragmentManager.beginTransaction()
-                    .replace(R.id.content_frame, frag)
-                    .commit();
-        } else if (toSet == 1) {
             Fragment frag = new StockFragment();
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, frag)
                     .commit();
-        } else if (toSet == 2) {
-            // Implement eventually
-            /*Fragment frag = new NewsFragment();
+        } else if (toSet == 1) {
+            Fragment frag = new IndexFragment();
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, frag)
-                    .commit();*/
+                    .commit();
+        } else if (toSet == 2) {
+            Fragment frag = new NewsFragment();
+            FragmentManager fragmentManager = getFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, frag)
+                    .commit();
         }
+    }
+
+    @Override
+    public void onBackPressed() {
+        if (getSharedPreferences("PREFERENCES", MODE_PRIVATE).getInt("LastVisitedScreen", 0) != 2) super.onBackPressed();
+        else if (!((NewsFragment) getFragmentManager().findFragmentById(R.id.content_frame)).onBackPressed()) super.onBackPressed();
     }
 }
