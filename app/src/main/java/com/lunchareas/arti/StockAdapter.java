@@ -1,5 +1,13 @@
 package com.lunchareas.arti;
 
+/* StockAdapter.java
+ * v1.0.0
+ * 2017-05-28
+ *
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Full copyright information available in MainActivity.java
+ */
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

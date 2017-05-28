@@ -1,5 +1,13 @@
 package com.lunchareas.arti;
 
+/* NewsFragment.java
+ * v1.0.0
+ * 2017-05-28
+ *
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Full copyright information available in MainActivity.java
+ */
+
 import android.app.Fragment;
 import android.os.AsyncTask;
 import android.os.Bundle;
