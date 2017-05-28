@@ -57,13 +57,17 @@ public class ArtiData extends SQLiteOpenHelper {
         // Stock Table Things
         private static class StockUtility implements BaseColumns {
             static final String TABLE_NAME = "stocks";
-            static final String COLUMN_NAME_NAME = "name";
+            static final String COLUMN_NAME = "name";
+            static final String COLUMN_NUM_OWNED = "owned";
+            static final String COLUMN_TOTAL_PR = "total_price_paid";
         }
 
         private static final String SQL_CREATE_STOCK =
                 "CREATE TABLE " + StockUtility.TABLE_NAME + " (" +
                         StockUtility._ID + " INTEGER PRIMARY KEY," +
-                        StockUtility.COLUMN_NAME_NAME + " TEXT)";
+                        StockUtility.COLUMN_NAME + " TEXT, " +
+                        StockUtility.COLUMN_NUM_OWNED + " INTEGER, " +
+                        StockUtility.COLUMN_TOTAL_PR + " FLOAT)";
 
         private static final String SQL_DELETE_STOCK =
                 "DROP TABLE IF EXISTS " + StockUtility.TABLE_NAME;
@@ -100,22 +104,71 @@ public class ArtiData extends SQLiteOpenHelper {
     }
 
     public void addStock(String stock) {
+        addStock(stock, 0, 0);
+    }
+
+    public void addStock(String stock, int num, double price) {
         if (stock.equals("") || returnStocks().contains(stock.toUpperCase())) return;
 
         ContentValues values = new ContentValues();
-        values.put(DataUtility.StockUtility.COLUMN_NAME_NAME, stock);
+        values.put(DataUtility.StockUtility.COLUMN_NAME, stock);
+        values.put(DataUtility.StockUtility.COLUMN_NUM_OWNED, num);
+        values.put(DataUtility.StockUtility.COLUMN_TOTAL_PR, price);
 
         getWritableDatabase().insert(DataUtility.StockUtility.TABLE_NAME, null, values);
     }
 
+    public Stock getStock(String stock) {
+        String[] projection = {DataUtility.StockUtility.COLUMN_NAME, DataUtility.StockUtility.COLUMN_NUM_OWNED, DataUtility.StockUtility.COLUMN_TOTAL_PR};
+        String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
+        String[] selectionArgs = {stock};
+
+        Cursor cursor = getReadableDatabase().query(DataUtility.StockUtility.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
+
+        int num = cursor.getInt(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_NUM_OWNED));
+        double price = cursor.getDouble(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_TOTAL_PR));
+
+        cursor.close();
+
+        return new Stock(stock, num, price);
+    }
+
+    public void buyStock(String stock, double price) {
+        buyStock(stock, 1, price);
+    }
+
+    public void buyStock(String stock, int num, double price) {
+        Stock original = getStock(stock);
+
+        ContentValues values = new ContentValues();
+        values.put(DataUtility.StockUtility.COLUMN_NUM_OWNED, original.numOwned + num);
+        values.put(DataUtility.StockUtility.COLUMN_TOTAL_PR, original.totalPrice + num*price);
+
+        String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
+        String[] selectionArgs = {stock};
+
+        getReadableDatabase().update(DataUtility.StockUtility.TABLE_NAME, values, selection, selectionArgs);
+    }
+
+    public void sellStock(String stock) {
+        ContentValues values = new ContentValues();
+        values.put(DataUtility.StockUtility.COLUMN_NUM_OWNED, 0);
+        values.put(DataUtility.StockUtility.COLUMN_TOTAL_PR, 0);
+
+        String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
+        String[] selectionArgs = {stock};
+
+        getReadableDatabase().update(DataUtility.StockUtility.TABLE_NAME, values, selection, selectionArgs);
+    }
+
     public List<String> returnStocks() {
-        String[] projection = {DataUtility.StockUtility.COLUMN_NAME_NAME};
+        String[] projection = {DataUtility.StockUtility.COLUMN_NAME};
 
         Cursor cursor = getReadableDatabase().query(DataUtility.StockUtility.TABLE_NAME, projection, null, null, null, null, null);
 
         List<String> stocks = new ArrayList<>();
         while(cursor.moveToNext()) {
-            String stock = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_NAME_NAME));
+            String stock = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_NAME));
             stocks.add(stock);
         }
         cursor.close();
@@ -126,7 +179,7 @@ public class ArtiData extends SQLiteOpenHelper {
     public String removeStock(String stock) {
         if (stock.equals("") || !returnStocks().contains(stock.toUpperCase())) return stock;
 
-        String selection = DataUtility.StockUtility.COLUMN_NAME_NAME + " LIKE ?";
+        String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
         String[] selectionArgs = {stock};
         getWritableDatabase().delete(DataUtility.StockUtility.TABLE_NAME, selection, selectionArgs);
 

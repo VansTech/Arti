@@ -24,6 +24,9 @@ public class Stock {
     private String ticker;
     private double price, diff;
 
+    double totalPrice;
+    int numOwned;
+
     private StockAdapter adapter;
     private Context context;
 
@@ -32,6 +35,12 @@ public class Stock {
         this.context = context;
 
         new StockAsync().execute();
+    }
+
+    public Stock(String ticker, int numOwned, double totalPrice) {
+        this.ticker = ticker;
+        this.numOwned = numOwned;
+        this.totalPrice = totalPrice;
     }
 
     public void setAdapter(StockAdapter adapter) {
