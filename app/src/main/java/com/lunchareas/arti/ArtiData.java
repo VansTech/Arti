@@ -75,7 +75,7 @@ public class ArtiData extends SQLiteOpenHelper {
 
         List<String> indices = new ArrayList<>();
         while(cursor.moveToNext()) {
-            String index = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.IndexUtility._ID));
+            String index = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.IndexUtility.COLUMN_NAME_NAME));
             indices.add(index);
         }
         cursor.close();
@@ -89,5 +89,41 @@ public class ArtiData extends SQLiteOpenHelper {
         getWritableDatabase().delete(DataUtility.IndexUtility.TABLE_NAME, selection, selectionArgs);
 
         return index;
+    }
+
+    public void addStock(String stock) {
+        if (stock.equals("") || returnStocks().contains(stock.toUpperCase())) return;
+
+        System.out.println("ADDING " + stock);
+        ContentValues values = new ContentValues();
+        values.put(DataUtility.StockUtility.COLUMN_NAME_NAME, stock);
+
+        getWritableDatabase().insert(DataUtility.StockUtility.TABLE_NAME, null, values);
+    }
+
+    public List<String> returnStocks() {
+        String[] projection = {DataUtility.StockUtility.COLUMN_NAME_NAME};
+
+        Cursor cursor = getReadableDatabase().query(DataUtility.StockUtility.TABLE_NAME, projection, null, null, null, null, null);
+
+        List<String> stocks = new ArrayList<>();
+        while(cursor.moveToNext()) {
+            String stock = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_NAME_NAME));
+            stocks.add(stock);
+        }
+        cursor.close();
+
+        return stocks;
+    }
+
+    public String removeStock(String stock) {
+        if (stock.equals("") || !returnStocks().contains(stock.toUpperCase())) return stock;
+
+        System.out.println("REMOVING " + stock);
+        String selection = DataUtility.StockUtility.COLUMN_NAME_NAME + " LIKE ?";
+        String[] selectionArgs = {stock};
+        getWritableDatabase().delete(DataUtility.StockUtility.TABLE_NAME, selection, selectionArgs);
+
+        return stock;
     }
 }

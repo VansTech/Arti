@@ -3,111 +3,21 @@
 
     <item
         is-multidex="true"
-        jar="/home/vans/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jar="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/support-annotations-25.3.1_b9db2d4600bf504c9b3b7deeb83c495af6cd011f/classes.dex" />
+        sha1="caff8e51a24901cfc9cd7e1cf83d84f4cb0c103b">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a317452a80b322d480109a499678828ceb02f642/classes.dex" />
     </item>
     <item
         is-multidex="true"
-        jar="/home/vans/.android/build-cache/77cef775af4ab1bb061451fd3d580ef1f6718f17/output/jars/classes.jar"
+        jar="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_ca40ac27cea6236e5d3bc086ba6bef33d21f1ba2/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/d9e82c24d2e1f8e8597becbf8600476ba792f3d9/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_f214c6f64514dd4c5b821abca8f73047bf2c1acd/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/08ddb3baa1c32b4149be71b48d014d51503a950d/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_d1eb05560b6be65cbbdd27df3e44d8ff37e577c0/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="5943645dac69faef89b6c53e6f4a3b6fcdfd8563">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_d880d177d2348ea503e06f2c2d23247b3ed1be12/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/399722859e3887ce05bf6769c3d142923198b9c6/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_e6cf69c15a900d51467e28c167d1807c6db25c36/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/ba237dcf96f32394cbc959932c159305c9b5c16c/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_838f06413a2e8af5ede9b2e70040db9f3070af68/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/b42a3255d72f32671a99f090f98d81c52983581e/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_710e55e122eeef27ecb6d004668e7d0d9975df98/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/c3d8631c4fdae6b600b4c72a1a8ca7df478649a6/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_7c53e2ddbdb5faba7bbad542c591f5bea892299c/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/989615c48d88aea2167a0bb6e8f4ee25fda9d2ae/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_057dd139c99171438409980091e4f7fd33a4148a/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/.android/build-cache/6fb501f6939e529bdea3375fcb44c55c4c515797/output/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10/classes_5f1f1f18aa725a3b60be179fd92be1b9f7525cba/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="510aa6efc159983dfbffa676a0dae37568c0a46f">
-        <dex dex="/home/vans/AndroidStudioProjects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run_a4e5986cfd1bc222b2335c4d071e3a06b3369cc5/classes.dex" />
+        sha1="57204c461bc8040a6a64124cf4a96b66909a2e99">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_790694af0fdff72c2610a7431c348e5d85de756f/classes.dex" />
     </item>
 
 </items>

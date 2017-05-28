@@ -15,4 +15,8 @@
     <color name="black">#212121</color>
     <color name="light_gray">#EEEEEE</color>
 
+    <!-- P&L -->
+    <color name="red">#FF0000</color>
+    <color name="green">#00BB00</color>
+
 </resources>

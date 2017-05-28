@@ -30,21 +30,34 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/toolbar_main"
+        android:layout_above="@+id/anchor">
+    </FrameLayout>
+
     <!-- Anchor view on bottom -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="64dp"
         android:layout_alignParentBottom="true"
         android:background="@color/light_gray"
-        android:gravity="center_horizontal">
+        android:gravity="center_horizontal"
+        android:id="@+id/anchor">
 
         <ImageView
+            android:id="@+id/btn_home"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
             android:src="@drawable/home"/>
 
         <ImageView
+            android:id="@+id/btn_search"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -53,6 +66,7 @@
             android:src="@drawable/search"/>
 
         <ImageView
+            android:id="@+id/btn_money"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
@@ -61,6 +75,7 @@
             android:src="@drawable/money"/>
 
         <ImageView
+            android:id="@+id/btn_news"
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:layout_gravity="center"
