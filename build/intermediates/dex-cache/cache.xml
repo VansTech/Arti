@@ -2,6 +2,42 @@
 <items version="2" >
 
     <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/14716d24ebcfd0154e92fd63310e5a24fca51660/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_e9825526cec222774fc480a50bf2c6a9e2ff2d3a.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/c607dc137ec7b030070e20a943a5e3d974f68d47/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_74093373422c67d0b098cee1e1bbe5bcd61e9fec.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/Library/Android/sdk/extras/m2repository/com/android/support/constraint/constraint-layout-solver/1.0.2/constraint-layout-solver-1.0.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/constraint-layout-solver-1.0.2_969a79f4e5d603d8a718bbc6a4783d8689de2dce.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/fd54eedcab8b033fcf27f7bce6ff4f1dc15582f2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_414597895702866d6f04a2d1a3c48bbb38220622.jar" />
+    </item>
+    <item
         is-multidex="true"
         jar="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/incremental-runtime-classes/debug/instant-run.jar"
         jumboMode="true"
@@ -18,6 +54,78 @@
         revision="25.0.2"
         sha1="57204c461bc8040a6a64124cf4a96b66909a2e99">
         <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_790694af0fdff72c2610a7431c348e5d85de756f/classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/4ca402f5dc2249d4eaccd50411dbf47f26082995/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_8de2ea1e2443fd525370db397bcb61cf4af553b2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/fb472ebd276cc6bab49585d1ca89a823157e335f/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_484ad4e14a8c46803a7a5ddf4e42be914d0a8797.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/Library/Android/sdk/extras/android/m2repository/com/android/support/support-annotations/25.3.1/support-annotations-25.3.1.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/support-annotations-25.3.1_9f8906348e5b5e563815724b6c3b9444c1059eb0.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/8d7d8819b32c8dce640ff2e76bf49226a769aed2/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_db2c65b8bd2019b1dcd57599b759a3de8c4af5e9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/b267c2b1358a252f33b123a14d90a9558389dce9/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_780e4f7202ff5c265946d3824237cf10e8a4ad69.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/c20e0ccc2e5c9ed136f0f91d1be789f3041f999d/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_bcbcc4ed55ffc5c11d9070deb6c6794b08c9c2da.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/6595eb6ac17c69a1ed4fdd6e34c51f095cc05d36/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_ea8c9d35dee69012cb0c8eaaef8f539f30805451.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/Users/svanshaj/.android/build-cache/eaf9624162333da2df7890d458ee72df4085de56/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="25.0.2"
+        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/pre-dexed/release/classes_3511b22123929dd1bbfeb4116a2f309fd800a343.jar" />
     </item>
 
 </items>
