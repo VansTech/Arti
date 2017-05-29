@@ -1,6 +1,6 @@
 # Arti
 
-Arti is an Android application that uses the [AlgoBot API](http://https://github.com/Davarco/AlgoBot) to buy/sell stocks in an _artificial_ environment using _real historical_ data.
+Arti is an Android application that uses the [AlgoBot API](https://github.com/Davarco/AlgoBot) to buy/sell stocks in an _artificial_ environment using _real historical_ data.
 
 ## Installation and Usage
 
@@ -18,7 +18,7 @@ Using **Add Stock** in the app's overflow menu, add the stocks you wish the app 
 ## License
 
     Arti - Buy/sell stocks in an artificial environment
-    Copyright (C) 2017  Vanshaj Singhania, David Zhang
+    Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
 
     This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
