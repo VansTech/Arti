@@ -62,7 +62,7 @@ public class Stock {
     private class StockAsync extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {
-            String url_select = "http://192.168.1.128:5000/stocks/get/";
+            String url_select = "http://9b49bbed.ngrok.io/stocks/get/";
             BufferedReader reader;
 
             try {

@@ -10,12 +10,6 @@
         android:title="">
         <menu>
             <item
-                android:id="@+id/add_index"
-                android:title="@string/add_index" />
-            <item
-                android:id="@+id/delete_index"
-                android:title="@string/delete_index" />
-            <item
                 android:id="@+id/add_stock"
                 android:title="@string/add_stock" />
             <item

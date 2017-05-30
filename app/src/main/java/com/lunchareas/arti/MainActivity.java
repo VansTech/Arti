@@ -76,13 +76,13 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.btn_money).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                /*Fragment frag = new IndexFragment();
+                Fragment frag = new BankFragment();
                 FragmentManager fragmentManager = getFragmentManager();
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, frag)
                         .commit();
 
-                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 1).apply();*/
+                getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 1).apply();
             }
         });
 
@@ -98,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
                 getSharedPreferences("PREFERENCES", MODE_PRIVATE).edit().putInt("LastVisitedScreen", 2).apply();
             }
         });
-
-
     }
 
     @Override
@@ -111,18 +109,6 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.add_index: {
-                data.addIndex("NASDAQ");
-                recreate();
-                goToScreen();
-                return true;
-            }
-            case R.id.delete_index: {
-                data.removeIndex("NASDAQ");
-                recreate();
-                goToScreen();
-                return true;
-            }
             case R.id.add_stock: {
                 AlertDialog.Builder builder = new AlertDialog.Builder(this);
                 builder.setTitle("Add Stock");
@@ -187,7 +173,7 @@ public class MainActivity extends AppCompatActivity {
                     .replace(R.id.content_frame, frag)
                     .commit();
         } else if (toSet == 1) {
-            Fragment frag = new IndexFragment();
+            Fragment frag = new BankFragment();
             FragmentManager fragmentManager = getFragmentManager();
             fragmentManager.beginTransaction()
                     .replace(R.id.content_frame, frag)

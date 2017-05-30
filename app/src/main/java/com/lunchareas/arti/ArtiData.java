@@ -29,8 +29,8 @@ public class ArtiData extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL(DataUtility.SQL_CREATE_INDEX);
-        db.execSQL(DataUtility.SQL_CREATE_STOCK);
+        db.execSQL(DataUtility.StockUtility.SQL_CREATE);
+        db.execSQL(DataUtility.LogUtility.SQL_CREATE);
     }
 
     @Override
@@ -39,68 +39,41 @@ public class ArtiData extends SQLiteOpenHelper {
     }
 
     private static class DataUtility {
+        private static class LogUtility implements BaseColumns {
+            static final String TABLE_NAME = "logs";
+            static final String COLUMN_DATE = "date";
+            static final String COLUMN_DESC = "desc";
+            static final String COLUMN_STOCK = "stock";
+            static final String COLUMN_MONETARY = "monetary_change";
 
-        // Index Table Things
-        private static class IndexUtility implements BaseColumns {
-            static final String TABLE_NAME = "indices";
-            static final String COLUMN_NAME_NAME = "name";
+            private static final String SQL_CREATE =
+                    "CREATE TABLE " + TABLE_NAME + " (" +
+                            _ID + " INTEGER PRIMARY KEY," +
+                            COLUMN_DATE + " TEXT," +
+                            COLUMN_DESC + " TEXT," +
+                            COLUMN_STOCK + " TEXT," +
+                            COLUMN_MONETARY + " FLOAT)";
+
+            private static final String SQL_DELETE =
+                    "DROP TABLE IF EXISTS " + TABLE_NAME;
         }
 
-        private static final String SQL_CREATE_INDEX =
-                "CREATE TABLE " + IndexUtility.TABLE_NAME + " (" +
-                        IndexUtility._ID + " INTEGER PRIMARY KEY," +
-                        IndexUtility.COLUMN_NAME_NAME + " TEXT)";
-
-        private static final String SQL_DELETE_INDEX =
-                "DROP TABLE IF EXISTS " + IndexUtility.TABLE_NAME;
-
-        // Stock Table Things
         private static class StockUtility implements BaseColumns {
             static final String TABLE_NAME = "stocks";
             static final String COLUMN_NAME = "name";
             static final String COLUMN_NUM_OWNED = "owned";
             static final String COLUMN_TOTAL_PR = "total_price_paid";
+
+            private static final String SQL_CREATE =
+                    "CREATE TABLE " + TABLE_NAME + " (" +
+                            _ID + " INTEGER PRIMARY KEY," +
+                            COLUMN_NAME + " TEXT," +
+                            COLUMN_NUM_OWNED + " INTEGER," +
+                            COLUMN_TOTAL_PR + " FLOAT)";
+
+            private static final String SQL_DELETE =
+                    "DROP TABLE IF EXISTS " + TABLE_NAME;
         }
-
-        private static final String SQL_CREATE_STOCK =
-                "CREATE TABLE " + StockUtility.TABLE_NAME + " (" +
-                        StockUtility._ID + " INTEGER PRIMARY KEY," +
-                        StockUtility.COLUMN_NAME + " TEXT, " +
-                        StockUtility.COLUMN_NUM_OWNED + " INTEGER, " +
-                        StockUtility.COLUMN_TOTAL_PR + " FLOAT)";
-
-        private static final String SQL_DELETE_STOCK =
-                "DROP TABLE IF EXISTS " + StockUtility.TABLE_NAME;
-    }
-
-    public void addIndex(String index) {
-        ContentValues values = new ContentValues();
-        values.put(DataUtility.IndexUtility.COLUMN_NAME_NAME, index);
-
-        getWritableDatabase().insert(DataUtility.IndexUtility.TABLE_NAME, null, values);
-    }
-
-    public List<String> returnIndices() {
-        String[] projection = {DataUtility.IndexUtility.COLUMN_NAME_NAME};
-
-        Cursor cursor = getReadableDatabase().query(DataUtility.IndexUtility.TABLE_NAME, projection, null, null, null, null, null);
-
-        List<String> indices = new ArrayList<>();
-        while(cursor.moveToNext()) {
-            String index = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.IndexUtility.COLUMN_NAME_NAME));
-            indices.add(index);
-        }
-        cursor.close();
-
-        return indices;
-    }
-
-    public String removeIndex(String index) {
-        String selection = DataUtility.IndexUtility.COLUMN_NAME_NAME + " LIKE ?";
-        String[] selectionArgs = {index};
-        getWritableDatabase().delete(DataUtility.IndexUtility.TABLE_NAME, selection, selectionArgs);
-
-        return index;
     }
 
     public void addStock(String stock) {
@@ -111,7 +84,7 @@ public class ArtiData extends SQLiteOpenHelper {
         if (stock.equals("") || returnStocks().contains(stock.toUpperCase())) return;
 
         ContentValues values = new ContentValues();
-        values.put(DataUtility.StockUtility.COLUMN_NAME, stock);
+        values.put(DataUtility.StockUtility.COLUMN_NAME, stock.toUpperCase());
         values.put(DataUtility.StockUtility.COLUMN_NUM_OWNED, num);
         values.put(DataUtility.StockUtility.COLUMN_TOTAL_PR, price);
 
@@ -119,9 +92,11 @@ public class ArtiData extends SQLiteOpenHelper {
     }
 
     public Stock getStock(String stock) {
-        String[] projection = {DataUtility.StockUtility.COLUMN_NAME, DataUtility.StockUtility.COLUMN_NUM_OWNED, DataUtility.StockUtility.COLUMN_TOTAL_PR};
+        String[] projection = {DataUtility.StockUtility.COLUMN_NUM_OWNED, DataUtility.StockUtility.COLUMN_TOTAL_PR};
         String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
-        String[] selectionArgs = {stock};
+
+        System.out.println("Stock in question: " + stock.toUpperCase());
+        String[] selectionArgs = {stock.toUpperCase()};
 
         Cursor cursor = getReadableDatabase().query(DataUtility.StockUtility.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
 
@@ -156,7 +131,7 @@ public class ArtiData extends SQLiteOpenHelper {
         values.put(DataUtility.StockUtility.COLUMN_TOTAL_PR, 0);
 
         String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
-        String[] selectionArgs = {stock};
+        String[] selectionArgs = {stock.toUpperCase()};
 
         getReadableDatabase().update(DataUtility.StockUtility.TABLE_NAME, values, selection, selectionArgs);
     }
@@ -184,5 +159,34 @@ public class ArtiData extends SQLiteOpenHelper {
         getWritableDatabase().delete(DataUtility.StockUtility.TABLE_NAME, selection, selectionArgs);
 
         return stock;
+    }
+
+    public List<ArtiLog> returnLogs() {
+        String[] projection = {DataUtility.LogUtility.COLUMN_DATE, DataUtility.LogUtility.COLUMN_DESC, DataUtility.LogUtility.COLUMN_STOCK, DataUtility.LogUtility.COLUMN_MONETARY};
+
+        Cursor cursor = getReadableDatabase().query(DataUtility.LogUtility.TABLE_NAME, projection, null, null, null, null, null);
+
+        List<ArtiLog> logs = new ArrayList<>();
+        while(cursor.moveToNext()) {
+            String date = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.LogUtility.COLUMN_DATE));
+            String desc = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.LogUtility.COLUMN_DESC));
+            String stock = cursor.getString(cursor.getColumnIndexOrThrow(DataUtility.LogUtility.COLUMN_STOCK));
+            double monetary = cursor.getDouble(cursor.getColumnIndexOrThrow(DataUtility.LogUtility.COLUMN_MONETARY));
+
+            logs.add(new ArtiLog(date, desc, stock, monetary));
+        }
+        cursor.close();
+
+        return logs;
+    }
+
+    public void addLog(ArtiLog log) {
+        ContentValues values = new ContentValues();
+        values.put(DataUtility.LogUtility.COLUMN_DATE, log.getDate());
+        values.put(DataUtility.LogUtility.COLUMN_DESC, log.getDesc());
+        values.put(DataUtility.LogUtility.COLUMN_STOCK, log.getStock());
+        values.put(DataUtility.LogUtility.COLUMN_MONETARY, log.getMonetaryChange());
+
+        getWritableDatabase().insert(DataUtility.LogUtility.TABLE_NAME, null, values);
     }
 }
