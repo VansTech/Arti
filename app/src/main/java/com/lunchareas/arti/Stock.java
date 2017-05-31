@@ -31,14 +31,18 @@ public class Stock {
     private StockAdapter adapter;
     private Context context;
 
+    ProgressDialog dialog;
+    boolean hold = false;
+
     public Stock(String ticker, Context context, boolean hold) {
         this.ticker = ticker;
         this.context = context;
 
         if (hold) {
-            ProgressDialog dialog = new ProgressDialog(context);
-            dialog.setTitle("Loading Data");
-            dialog.setMessage("Shouldn't take too long...");
+            this.hold = true;
+            dialog = new ProgressDialog(context);
+            dialog.setTitle(ticker.toUpperCase());
+            dialog.setMessage("Loading data, should be quick.");
             dialog.setCancelable(false);
             dialog.setIndeterminate(true);
             dialog.show();
@@ -46,12 +50,11 @@ public class Stock {
             try {
                 StockAsync async = new StockAsync();
                 async.execute();
+
                 async.get();
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
-            dialog.cancel();
         } else {
             new StockAsync().execute();
         }
@@ -82,7 +85,7 @@ public class Stock {
     private class StockAsync extends AsyncTask<Void, Void, Void> {
         @Override
         protected Void doInBackground(Void... params) {
-            String url_select = "http://9b49bbed.ngrok.io/stocks/get/";
+            String url_select = "http://apcsalgobot.herokuapp.com/stocks/get/";
             BufferedReader reader;
 
             try {
@@ -120,6 +123,10 @@ public class Stock {
             super.onPostExecute(aVoid);
             if (adapter != null) {
                 adapter.notifyDataSetChanged();
+            }
+
+            if (hold) {
+                dialog.cancel();
             }
         }
     }

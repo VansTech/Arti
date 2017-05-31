@@ -10,12 +10,14 @@ package com.lunchareas.arti;
 
 import android.app.Fragment;
 import android.content.Context;
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -115,5 +117,10 @@ public class BankFragment extends Fragment{
         moneys = Math.round(moneys * 100) / 100;
         context.getSharedPreferences("PREFERENCES", Context.MODE_PRIVATE).edit().putFloat("UserMoneys", Float.parseFloat(Double.toString(moneys))).apply();
         moneysView.setText("We have " + Double.toString(moneys) + " moneys");
+
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+            Toast.makeText(getActivity(), "Done! Click $ to refresh for changes.", Toast.LENGTH_SHORT).show();
+            System.out.println("Sent Toast!");
+        }
     }
 }

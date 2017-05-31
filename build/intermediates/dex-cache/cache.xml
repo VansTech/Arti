@@ -3,111 +3,12 @@
 
     <item
         is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\4364ae05add2a928f9274334f56348a6ada4ef7b\output\jars\classes.jar"
+        jar="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="da27a32db6af8954ee8061537c7d476fcb1df46f">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_be312465fbc6cdaf04d8e8c306e986e9724bee26\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\946289294bd5dea1f4b4f1aabdc5f30263def849\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="47635644d0d5c103c1dd8360549eb9ba3225c7d3">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_b6a54e0f962b09f05b34bde9dbb1e6461445fb34\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\a92d74a28c9a7ed2e6b91b17bd7a4bd05a9a5a22\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="efb8cb62d47d157c29d1521daac7eefd4cb881ee">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2a01f8cd7a210bc27536280984d88c33414d52b8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\Android\AndroidSDK\extras\android\m2repository\com\android\support\support-annotations\25.3.1\support-annotations-25.3.1.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="bf8841d29fa39e077730e7a91222c2ce269fa7c9">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-annotations-25.3.1_6d82d584b19857039d5bbe40f122c299b4bab82e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\8258081953a80a9f2ce48652cf99184f69702f32\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="4a26a1154d053ab11aaf4c3967c42a4d66390991">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_50728f0cc37abea203e24eab869c75f1f4c46249\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\Android\AStudioProjects\Arti\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="3feec4cf3fe1a803f8f1a0b1ef2db3907893322a">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_4d7702deaba3957cc108b5a188af959ba4fa105e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\01fe6b2cd0c596c1f61371205eca5ea0660693cb\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="45f697922e6f072daa12f8a2995dc77ab03c11da">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_0674713d23bb771175a8b904490aba8358631df4\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\09e9f7aab4eb9372f9f821ef30d5f3e8e4b0a8bd\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="d7c42c80f6509b9ea4db28ca7859ffae08ec5741">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_4336558d8e30f660efd537b9ef6f146ff030b77e\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\34a1c40bff5ecf3cae17e3a8e9fb4d92b61ebe29\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="6ef31f1555bb4cc513ec8d52711365a8b89f3600">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_17fe3a312690129aff4c4268a5ebaf9c7f9d810d\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\12c2bc3be1270e653da7358d34403850e3dcf637\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="052f5f840f21174a3ecf6544130194e2652cbb73">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_3b5626be95732f956f52ef2452a18ed7f9f61c9b\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="F:\Android\AStudioProjects\Arti\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="12920f9016b8b05acbc2af7cdc13cef6946fe7d3">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_08bfa0f4b9808217c58572b368e50cab41226fd8\classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
-        jar="C:\Users\vstec_000\.android\build-cache\fa25c44b8343897a827dfd196c142f9df439d941\output\jars\classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.2"
-        sha1="150252b33b00274cc868578ade018fda0d43a3eb">
-        <dex dex="F:\Android\AStudioProjects\Arti\app\build\intermediates\transforms\dex\debug\folders\1000\10\classes_2524898129fe9a7d8ed395fb9b5386ed336535c5\classes.dex" />
+        sha1="28ea016f32527c04dd77978d6149b6c8a1e595ad">
+        <dex dex="/Users/svanshaj/Documents/Android Projects/MLAndroid/app/build/intermediates/transforms/dex/debug/folders/1000/10000/instant-run-bootstrap_790694af0fdff72c2610a7431c348e5d85de756f/classes.dex" />
     </item>
 
 </items>
