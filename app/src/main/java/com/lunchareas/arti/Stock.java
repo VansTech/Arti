@@ -1,13 +1,14 @@
 package com.lunchareas.arti;
 
 /* Stock.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  * Full copyright information available in MainActivity.java
  */
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.os.AsyncTask;
 
@@ -30,11 +31,30 @@ public class Stock {
     private StockAdapter adapter;
     private Context context;
 
-    public Stock(String ticker, Context context) {
+    public Stock(String ticker, Context context, boolean hold) {
         this.ticker = ticker;
         this.context = context;
 
-        new StockAsync().execute();
+        if (hold) {
+            ProgressDialog dialog = new ProgressDialog(context);
+            dialog.setTitle("Loading Data");
+            dialog.setMessage("Shouldn't take too long...");
+            dialog.setCancelable(false);
+            dialog.setIndeterminate(true);
+            dialog.show();
+
+            try {
+                StockAsync async = new StockAsync();
+                async.execute();
+                async.get();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+
+            dialog.cancel();
+        } else {
+            new StockAsync().execute();
+        }
     }
 
     public Stock(String ticker, int numOwned, double totalPrice) {

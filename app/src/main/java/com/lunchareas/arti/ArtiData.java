@@ -1,10 +1,10 @@
 package com.lunchareas.arti;
 
 /* ArtiData.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  * Full copyright information available in MainActivity.java
  */
 
@@ -95,10 +95,10 @@ public class ArtiData extends SQLiteOpenHelper {
         String[] projection = {DataUtility.StockUtility.COLUMN_NUM_OWNED, DataUtility.StockUtility.COLUMN_TOTAL_PR};
         String selection = DataUtility.StockUtility.COLUMN_NAME + " LIKE ?";
 
-        System.out.println("Stock in question: " + stock.toUpperCase());
         String[] selectionArgs = {stock.toUpperCase()};
 
         Cursor cursor = getReadableDatabase().query(DataUtility.StockUtility.TABLE_NAME, projection, selection, selectionArgs, null, null, null);
+        cursor.moveToFirst();
 
         int num = cursor.getInt(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_NUM_OWNED));
         double price = cursor.getDouble(cursor.getColumnIndexOrThrow(DataUtility.StockUtility.COLUMN_TOTAL_PR));

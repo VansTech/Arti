@@ -1,10 +1,10 @@
 package com.lunchareas.arti;
 
 /* LogAdapter.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  * Full copyright information available in MainActivity.java
  */
 
@@ -32,7 +32,7 @@ public class LogAdapter extends BaseAdapter {
 
     @Override
     public Object getItem(int position) {
-        return logs.get(position);
+        return logs.get(logs.size() - 1 - position);
     }
 
     @Override
@@ -42,6 +42,8 @@ public class LogAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        position = logs.size() - position - 1;
+
         LayoutInflater inflater = (LayoutInflater) parent.getContext().getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View logItemView = inflater.inflate(R.layout.log_item, parent, false);
 

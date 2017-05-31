@@ -1,5 +1,13 @@
 package com.lunchareas.arti;
 
+/* ArtiLog.java
+ * v1.1.0
+ * 2017-05-30
+ *
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
+ * Full copyright information available in MainActivity.java
+ */
+
 public class ArtiLog {
 
     private String date, desc, stock;

@@ -1,11 +1,11 @@
 package com.lunchareas.arti;
 
 /* MainActivity.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
  * Arti - Buy/sell stocks in an artificial environment
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  *
  * This program is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by

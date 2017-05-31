@@ -1,10 +1,10 @@
 package com.lunchareas.arti;
 
 /* StockFragment.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  * Full copyright information available in MainActivity.java
  */
 
@@ -40,9 +40,8 @@ public class StockFragment extends Fragment {
         List<String> stockStrings = data.returnStocks();
         List<Stock> stocks = new ArrayList<>();
 
-        System.out.println("PRINTING STOCKS");
         for (String s : stockStrings) {
-            stocks.add(new Stock(s, view.getContext()));
+            stocks.add(new Stock(s, view.getContext(), false));
         }
 
         ((ListView) view.findViewById(R.id.stock_list)).setAdapter(new StockAdapter(stocks));

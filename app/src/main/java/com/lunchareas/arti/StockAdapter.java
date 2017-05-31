@@ -1,10 +1,10 @@
 package com.lunchareas.arti;
 
 /* StockAdapter.java
- * v1.0.0
- * 2017-05-28
+ * v1.1.0
+ * 2017-05-30
  *
- * Copyright (C) 2017  Vanshaj Singhania, David Zhang
+ * Copyright (C) 2017  Vanshaj Singhania, David Zhang, Emil Tu
  * Full copyright information available in MainActivity.java
  */
 
@@ -24,7 +24,6 @@ public class StockAdapter extends BaseAdapter {
     public StockAdapter(List<Stock> stocks) {
         this.stocks = stocks;
         for (Stock s : stocks) {
-            System.out.println(s.getTicker());
             s.setAdapter(this);
         }
     }
