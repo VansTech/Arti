@@ -11,6 +11,9 @@ Arti is an Android application that uses the [AlgoBot API](https://github.com/Da
 
 In addition, you will require an internet connection to connect to the AlgoBot Server to fetch stock data.
 
+**Installation Link:**
+The latest release of Arti, version 1.2.0, is available for download [here](https://github.com/VansTech/Arti/raw/master/app/arti-release-1.2.0.apk). For a changelog, see [CHANGELOG.md](https://github.com/VansTech/Arti/blob/master/CHANGELOG.md).
+
 **Usage:**
 
 Using **Add Stock** in the app's overflow menu, add the stocks you wish the app to trade. Then, sit back and watch yourself make money (in an artificial environment). Additionally, you can use the News tab to conveniently browse Google News for any insight into the stocks you are trading. That way, you can remove certain stocks if you foresee a loss.
