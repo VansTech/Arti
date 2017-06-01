@@ -12,6 +12,7 @@ Arti is an Android application that uses the [AlgoBot API](https://github.com/Da
 In addition, you will require an internet connection to connect to the AlgoBot Server to fetch stock data.
 
 **Installation Link:**
+
 The latest release of Arti, version 1.2.0, is available for download [here](https://github.com/VansTech/Arti/raw/master/app/arti-release-1.2.0.apk). For a changelog, see [CHANGELOG.md](https://github.com/VansTech/Arti/blob/master/CHANGELOG.md).
 
 **Usage:**
