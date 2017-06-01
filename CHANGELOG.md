@@ -1,5 +1,5 @@
 # Arti Changelog
-Last updated 6:35 PM PDT, May 31, 2017.
+Last updated 6:48 PM PDT, May 31, 2017.
 
 ## v1.2.0
 
