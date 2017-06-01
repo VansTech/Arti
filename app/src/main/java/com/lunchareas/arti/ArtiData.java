@@ -21,7 +21,8 @@ import java.util.List;
 public class ArtiData extends SQLiteOpenHelper {
 
     private static final String DB_NAME = "ArtiData.db";
-    private static final int DB_VERSION = 1;
+    private static final int DB_VERSION = 2;                // likely the final update to the database forever.
+                                                            // had to be reconfigured due to backups issue. :)
 
     public ArtiData(Context context) {
         super(context, DB_NAME, null, DB_VERSION);
@@ -35,7 +36,10 @@ public class ArtiData extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL(DataUtility.StockUtility.SQL_DELETE);
+        db.execSQL(DataUtility.LogUtility.SQL_DELETE);
 
+        onCreate(db);
     }
 
     private static class DataUtility {
